@@ -19,3 +19,12 @@ let rec area s =
                       | hd :: tl -> area hd +. area (ComplexShape tl)
 ;;
 
+
+let rec perimeter s =
+  match s with
+  | Circle r -> 2. *. Float.pi *. r
+  | Rectangle (w,h) -> 2. *. (w +. h)
+  | ComplexShape l -> match l with
+                        | [] -> 0.
+                        | hd :: tl -> perimeter hd +. perimeter (ComplexShape tl)
+;;

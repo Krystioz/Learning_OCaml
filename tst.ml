@@ -78,3 +78,28 @@ let rec reverse l = match l with
 ;;
 
 reverse [1;2;3;4;5]
+
+
+let rec list_max l =
+  match l with
+  | [] -> None
+  | hd :: tl -> match list_max tl with
+                    | None -> Some hd
+                    | Some m -> Some (max hd m)
+;;
+
+
+let rec square_list l=
+  match l with
+  | [] -> []
+  | hd :: tl -> (hd *. hd) :: square_list tl
+;;
+
+let rec map l f =
+  match l with
+  | [] -> []
+  | hd :: tl -> (f hd) :: map tl f
+;;
+
+
+List.map (fun x -> x * x) [1;2;3]
