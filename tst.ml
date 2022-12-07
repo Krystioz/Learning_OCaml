@@ -1,4 +1,4 @@
-let pi = 3.14;;
+(* (* let pi = 3.14;;
 let square x = x *. x;;
 let circle_area r = pi *. (square r);;
 
@@ -62,11 +62,11 @@ let rec nth l n = if n <= 0 then List.hd l
 let rec length l = match l with
   | [] -> 0
   | hd :: tl -> 1 + length tl
-;;
+;; *)
 
 (* List.length is the same as length *)
 (* @ is the same as append *)
-
+(* 
 let rec append l1 l2 = match l1 with
   | [] -> l2
   | x :: xs -> x :: append xs l2
@@ -102,4 +102,28 @@ let rec map l f =
 ;;
 
 
-List.map (fun x -> x * x) [1;2;3]
+List.map (fun x -> x * x) [1;2;3];;
+
+
+(* example of named function *)
+let f ~name1:(arg1 : int) ~name2:(arg2 : int) = arg1 + arg2 *)
+
+(* |> |> evaluate function from left to right *)
+(* @@ can aeparate function call and expression to evaluate on the right *)
+
+
+(* you can fefine infix operators just as shown below *)
+(* let ( ^^ ) x y = max x y *)
+
+
+(* below recursive function vs tail recursive *)
+
+(* A recursive call in tail position does not need a new stack frame. It can just reuse the existing stack frame *)
+
+(* tail reursive sunction is a function that will not exhaust the call stack *)
+let rec count n =
+  if n = 0 then 0 else 1 + count (n - 1)
+
+let rec count_aux n acc =
+  if n = 0 then acc else count_aux (n - 1) (acc + 1)
+ *)

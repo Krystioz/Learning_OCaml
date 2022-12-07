@@ -1,4 +1,4 @@
-type shape = 
+(* type shape = 
               Circle of float
               | Rectangle of (float * float)
               | ComplexShape of shape list
@@ -27,4 +27,4 @@ let rec perimeter s =
   | ComplexShape l -> match l with
                         | [] -> 0.
                         | hd :: tl -> perimeter hd +. perimeter (ComplexShape tl)
-;;
+;; *)

@@ -1,4 +1,4 @@
-type 'a bin_tree = Leaf | Node of 'a bin_tree * 'a * 'a bin_tree
+(* type 'a bin_tree = Leaf | Node of 'a bin_tree * 'a * 'a bin_tree
 
 (* example of a binary tree as algebraic data type *)
 
@@ -67,4 +67,4 @@ type 'a mylist = Nil | Cons of 'a * 'a mylist
 longest_str ["abc";"abcd";"abcdef";"abcdefgh"];;
 
 let n = 2 in n * 2;;
-
+ *)
